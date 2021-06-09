@@ -18,6 +18,7 @@
         display: grid;
         grid-template-areas: "left middle right";
         font-size: 15px;
+        padding-inline: 2em 2em;
     }
     .left-header{
         grid-area: left;
@@ -25,14 +26,19 @@
     .right-header{
         grid-area: right;
         justify-self: end;
+
     }
     .footer{
         display: grid;
         grid-template-areas: 
         "leftt middlet rightt"
         "leftb middleb rightb";
-        background-color: hsl(240, 0%, 90%);
+        background-color: hsl(240, 0%, 95%);
+        padding: 5%;
 
+    }
+    .footer-text{
+        color:hsl(240, 0%, 40%)
     }
     .middle-footer{
         grid-area:middlet;
@@ -45,9 +51,9 @@
         justify-self: end;
     }
     .content{
+        justify-content: center;
         padding: 30%;
         flex: 2;
-        background-color: lightskyblue;
         display: grid;
 
     }
@@ -57,8 +63,41 @@
     }
     #lucky{
         justify-self: end;
+        margin-left: 20px;
+        margin-right: 15px;
+        grid-area: right;
     }
-    
+    .buttons{
+        border: none;
+        font-size: 14px;
+        border-radius: 10%;
+        padding: 10px;
+        margin-top: 10px;
+        background-color: hsl(240, 0%, 95%);
+    }
+    #search{
+        margin-left: 15px;
+        grid-area: left;
+    }
+    #search-butons{
+        display: grid;
+        grid-template-areas: "left middle right";
+        justify-content: center;
+        background-color: lightslategrey;
+    }
+
+    #quote{
+        padding-top: 20px;
+        justify-self: center;
+        color: darkblue;
+    }
+    #input{
+        padding: 10px 15em;
+        margin-bottom: 5px;
+        border-radius: 25px;
+        border-color: hsl(240, 0%, 90%);
+        border-style: solid;
+    }
     </style>
 
 </head>
@@ -78,28 +117,28 @@
 
 
     <div class ="content">
-        <img src="https://www.theodinproject.com/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg"
-         alt="odin Project image"
+        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+         alt="Google image"
          class="google-logo">
-        <input search place>
-        <div>
-            <button> Google Search</button>
-            <button id="lucky"> I'm feeling Lucky</button>
+        <input id="input">
+        <div id = "search-buttons">
+            <button id="search" class="buttons"> Google Search</button>
+            <button id="lucky" class="buttons"> I'm feeling Lucky</button>
         </div>
-        <a>Take a look into the life of Shirley Temple</a>
+        <a id="quote">Take a look into the life of Shirley Temple</a>
     </div>
 
 
-    <div class="footer"> footer
-        <div class="middle-footer">         
+    <div class="footer">
+        <div class="middle-footer footer-text">         
             <a>Carbon Neutral since 2007</a>
         </div>
-        <div class="left-footer">
+        <div class="left-footer footer-text" >
             <a>Advertising</a>
             <a> Business </a>
             <a>How Search Works</a>
         </div>
-        <div class="right-footer">
+        <div class="right-footer footer-text">
             <a>Privacy</a>
             <a>Terms</a>
             <a>Settings</a>
