@@ -5,12 +5,19 @@
     <style> 
     body{
         font-family: Roboto, arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        align-content: stretch;
+        height: 100%;
     }
     .header{
+        padding: 10px;
+        margin: 10px;
+        /*background-color: lightseagreen; */
         display: grid;
         grid-template-areas: "left middle right";
-        font-size: 10px;
-        background-color: lightgray;
+        font-size: 15px;
     }
     .left-header{
         grid-area: left;
@@ -21,11 +28,35 @@
     }
     .footer{
         display: grid;
+        grid-template-areas: 
+        "leftt middlet rightt"
+        "leftb middleb rightb";
+        background-color: hsl(240, 0%, 90%);
 
     }
+    .middle-footer{
+        grid-area:middlet;
+    }
+    .left-footer{
+        grid-area:leftb;
+    }
+    .right-footer{
+        grid-area:rightb;
+        justify-self: end;
+    }
     .content{
+        padding: 30%;
+        flex: 2;
+        background-color: lightskyblue;
         display: grid;
 
+    }
+    .google-logo{
+        justify-self:center;
+        margin-bottom: 50px;
+    }
+    #lucky{
+        justify-self: end;
     }
     
     </style>
@@ -44,17 +75,34 @@
             <img = "">
         </div>
     </div>
-    <div class ="content"> search</div>
-        <p>Google picture</p>
+
+
+    <div class ="content">
+        <img src="https://www.theodinproject.com/assets/odin-logo-bd86cf893a3de1f1daceabc1377f58669776616a91ab70c601fd5c16a4686468.svg"
+         alt="odin Project image"
+         class="google-logo">
         <input search place>
-        <button> Google Search</button>
-        <button> I'm feeling Lucky</button>
+        <div>
+            <button> Google Search</button>
+            <button id="lucky"> I'm feeling Lucky</button>
+        </div>
         <a>Take a look into the life of Shirley Temple</a>
-    <div class="footer"> footer</div>
-        <a>Carbon Neutral since 2007</a>
-        <a>Advertising</a>
-        <a>How Search Works</a>
-        <a>Privacy</a>
-        <a>Terms</a>
-        <a>Settings</a>
+    </div>
+
+
+    <div class="footer"> footer
+        <div class="middle-footer">         
+            <a>Carbon Neutral since 2007</a>
+        </div>
+        <div class="left-footer">
+            <a>Advertising</a>
+            <a> Business </a>
+            <a>How Search Works</a>
+        </div>
+        <div class="right-footer">
+            <a>Privacy</a>
+            <a>Terms</a>
+            <a>Settings</a>
+        </div>
+    </div>
 </body>
