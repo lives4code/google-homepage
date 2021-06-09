@@ -1,0 +1,1 @@
+This project is me practicing setting up the google homepage to practice my git, gtml, and css skills. 
