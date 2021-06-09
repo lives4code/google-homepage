@@ -3,28 +3,43 @@
     <title> Google homepage</title>
     <link rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css">
     <style> 
-    a {
-        font-family: Roboto, arial , sans-serif;
+    body{
+        font-family: Roboto, arial, sans-serif;
+    }
+    .header{
+        display: grid;
+        grid-template-columns: repeat(3, 30vw);
+        font-size: 10px;
+        background-color: lightgray;
+    }
+    .footer{
+        display: grid;
+
+    }
+    .content{
+        display: grid;
+
     }
     
     </style>
 
 </head>
 <body>
-    <div> header</div>
-        <a id ="product-sans" >About</a>
+    <div class="header">
+        <a>About</a>
         <a>Store</a>
         <a>Gmail</a>
         <a>Images</a>
         <a>nine dots</a>
         <img = "">
-    <div> search</div>
+    </div>
+    <div class ="content"> search</div>
         <p>Google picture</p>
         <input search place>
         <button> Google Search</button>
         <button> I'm feeling Lucky</button>
         <a>Take a look into the life of Shirley Temple</a>
-    <div> footer</div>
+    <div class="footer"> footer</div>
         <a>Carbon Neutral since 2007</a>
         <a>Advertising</a>
         <a>How Search Works</a>
