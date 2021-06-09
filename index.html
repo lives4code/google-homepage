@@ -8,9 +8,16 @@
     }
     .header{
         display: grid;
-        grid-template-columns: repeat(3, 30vw);
+        grid-template-areas: "left middle right";
         font-size: 10px;
         background-color: lightgray;
+    }
+    .left-header{
+        grid-area: left;
+    }
+    .right-header{
+        grid-area: right;
+        justify-self: end;
     }
     .footer{
         display: grid;
@@ -26,12 +33,16 @@
 </head>
 <body>
     <div class="header">
-        <a>About</a>
-        <a>Store</a>
-        <a>Gmail</a>
-        <a>Images</a>
-        <a>nine dots</a>
-        <img = "">
+        <div class ="left-header"> 
+            <a>About</a>
+            <a>Store</a>
+        </div>
+        <div class="right-header">
+            <a>Gmail</a>
+            <a>Images</a>
+            <a>nine dots</a>
+            <img = "">
+        </div>
     </div>
     <div class ="content"> search</div>
         <p>Google picture</p>
